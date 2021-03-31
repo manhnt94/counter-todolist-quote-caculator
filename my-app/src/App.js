@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CounterComponent from "./components/counter/CounterComponent";
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function App() {
       </div>
 
       <Switch>
-        <Route path="/counter"></Route>
+        <Route path="/counter" component={CounterComponent}></Route>
         <Route path="/todolist"></Route>
         <Route path="/quote"></Route>
         <Route path="/caculator"></Route>
