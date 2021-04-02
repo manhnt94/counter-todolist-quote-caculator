@@ -1,10 +1,10 @@
+import produce from "immer";
 import {
   DECREMENT_COUNTER,
   DECREMENT_COUNTER_IMMERJS,
   INCREMENT_COUNTER,
   INCREMENT_COUNTER_IMMERJS,
 } from "../constants/counterConstants";
-import produce from "immer";
 
 export const counterReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
