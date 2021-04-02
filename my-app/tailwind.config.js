@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       height: (theme) => ({
-        "counter-flex-col": "calc(100vh - 48px)", // Calc height for counter flex col with nav heigh 48px;
+        "calc-bottom": "calc(100vh - 48px)", // Calc height for counter flex col with nav heigh 48px;
       }),
       flex: {
         "0020": "0 0 20%",

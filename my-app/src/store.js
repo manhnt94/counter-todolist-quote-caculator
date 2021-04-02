@@ -4,6 +4,7 @@ import {
   counterReducer,
   counterReducerImmerjs,
 } from "./reducers/counterReducers";
+import { quoteReducer } from "./reducers/quoteReducers";
 import { todoReducers } from "./reducers/todolistReducers";
 
 const initialState = {
@@ -18,6 +19,7 @@ const reducer = combineReducers({
   counter: counterReducer,
   counterImmerjs: counterReducerImmerjs,
   todoList: todoReducers,
+  quote: quoteReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));
