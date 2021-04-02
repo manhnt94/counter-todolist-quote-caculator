@@ -40,7 +40,6 @@ export const deleteTodo = (id) => (dispatch, getState) => {
 };
 
 export const clearCompleted = () => (dispatch, getState) => {
-  console.log("hi")
   dispatch({
     type: CLEAR_COMPLETED,
   });

@@ -30,7 +30,6 @@ export const todoReducers = (state = initialState, action) => {
       };
     case CHECK_ALL_TODO:
       const isCompletedAll = action.payload;
-      console.log(isCompletedAll);
       if (isCompletedAll) {
         return {
           ...state,

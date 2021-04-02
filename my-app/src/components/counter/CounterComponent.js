@@ -6,7 +6,7 @@ import CounterRedux from "./counter-redux/CounterRedux";
 
 export default function CounterComponent() {
   return (
-    <div className="flex flex-col h-counter-flex-col">
+    <div className="flex flex-col h-calc-bottom">
       <CounterClassComponent />
       <CounterFunctionalComponent />
       <CounterImmerjs />
