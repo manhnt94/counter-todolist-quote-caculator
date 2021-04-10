@@ -22,26 +22,34 @@ export default class CounterClassComponent extends Component {
 
   render() {
     return (
-      <div className="flex h-full justify-center items-center">
-        <p className="w-80">Counter Class Component</p>
-        <button
-          className={`btn-counter rounded-l-lg ${
-            this.state.counter === 0 && "disabled:opacity-50"
-          }`}
-          disabled={this.state.counter === 0}
-          onClick={() => this.handleCounter("sub")}
-        >
-          -
-        </button>
-        <label className="w-12 text-center inline-block py-2 bg-pink-300">
-          {this.state.counter}
-        </label>
-        <button
-          className="btn-counter rounded-r-lg"
-          onClick={() => this.handleCounter("add")}
-        >
-          +
-        </button>
+      <div className="counter-wrapper bg-white h-96 mb-12 lg:flex-0020 md:flex-0040 sm:flex-0060 xs:flex-0070 xsm:flex-0080 rounded-xl shadow-xl">
+        <div className="counter-timer text-center">
+          <span className="inline-block text-8xl text-normal py-20 tracking-widest">
+            {this.state.counter}
+          </span>
+        </div>
+        <div className="counter-btn flex justify-around mb-6">
+          <button
+            className={`btn-counter text-5xl w-1/3 ${
+              this.state.counter === 0 && "disabled:opacity-50"
+            }`}
+            disabled={this.state.counter === 0}
+            onClick={() => this.handleCounter("sub")}
+          >
+            -
+          </button>
+          <button
+            className="btn-counter text-5xl w-1/3"
+            onClick={() => this.handleCounter("add")}
+          >
+            +
+          </button>
+        </div>
+        <div className="text-center">
+          <span className="text-normal tracking-widest">
+            Class Component
+          </span>
+        </div>
       </div>
     );
   }
