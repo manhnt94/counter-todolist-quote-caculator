@@ -3,59 +3,17 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CounterComponent from "./components/counter/CounterComponent";
 import TodoListComponent from "./components/todolist/TodoListComponent";
 import Quote from "./components/quote/Quote";
+import Home from "./components/home/Home";
 
 function App() {
   return (
     <Router>
-      <div>
-        <header>
-          <nav className="flex bg-yellow-300">
-            <div className="w-1/5">
-              <h1 className="text-center">My App</h1>
-            </div>
-            <ul className="w-4/5 flex flex-row">
-              <li className="w-1/4">
-                <a
-                  href="/counter"
-                  className="inline-block w-full p-3 text-center hover:bg-yellow-500"
-                >
-                  Counter
-                </a>
-              </li>
-              <li className="w-1/4">
-                <a
-                  href="/todolist"
-                  className="inline-block w-full p-3 text-center hover:bg-yellow-500"
-                >
-                  Todolist
-                </a>
-              </li>
-              <li className="w-1/4">
-                <a
-                  href="/quote"
-                  className="inline-block w-full p-3 text-center hover:bg-yellow-500"
-                >
-                  Quote
-                </a>
-              </li>
-              <li className="w-1/4">
-                <a
-                  href="/caculator"
-                  className="inline-block w-full p-3 text-center hover:bg-yellow-500"
-                >
-                  Caculator
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-
       <Switch>
-        <Route path="/counter" component={CounterComponent}></Route>
-        <Route path="/todolist" component={TodoListComponent}></Route>
-        <Route path="/quote" component={Quote}></Route>
-        <Route path="/caculator"></Route>
+        <Route path="/counter" component={CounterComponent} />
+        <Route path="/todolist" component={TodoListComponent} />
+        <Route path="/quote" component={Quote} />
+        <Route path="/caculator" />
+        <Route path="/" component={Home} />
       </Switch>
     </Router>
   );
