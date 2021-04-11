@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Todo from "../todo/Todo";
 
 export default function TodoList(props) {

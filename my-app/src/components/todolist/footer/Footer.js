@@ -24,17 +24,17 @@ export default function Footer(props) {
   };
 
   return (
-    <footer className="border-2 flex justify-between py-1">
-      <label className="flex-0020 px-5">
+    <footer className="todo-footer border-2 flex justify-between py-1">
+      <label className="flex-0025 pl-5 flex items-center">
         {getTodoLeft() > 1 ? `${getTodoLeft()} items` : `${getTodoLeft()} item`}{" "}
         left
       </label>
-      <div className="flex-0050 flex justify-center">
+      <div className="flex-0050 flex justify-center items-center">
         {["All", "Active", "Completed"].map((item, index) => (
           <li
             key={index}
-            className={`mr-3 list-none ${
-              filterBy === item ? "border-2 rounded" : ""
+            className={`mr-2 px-2 h-7 list-none cursor-pointer hover:border-2 rounded ${
+              filterBy === item ? "border-2 rounded border-red-100" : ""
             }`}
             onClick={() => handleFilterChange(item)}
           >
@@ -42,14 +42,16 @@ export default function Footer(props) {
           </li>
         ))}
       </div>
-      <button
-        className={`flex-0030 text-right px-5 ${
-          isShowClearBtn() ? "" : "invisible"
-        }`}
-        onClick={() => dispatch(clearCompleted())}
-      >
-        Clear Completed
-      </button>
+      <div className="flex-0025 pr-5">
+        <button
+          className={`text-right hover:border-b-2 ${
+            isShowClearBtn() ? "" : "invisible"
+          }`}
+          onClick={() => dispatch(clearCompleted())}
+        >
+          Clear Completed
+        </button>
+      </div>
     </footer>
   );
 }
