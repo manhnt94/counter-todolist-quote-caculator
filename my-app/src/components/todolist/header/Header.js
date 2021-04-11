@@ -25,20 +25,20 @@ export default function Header(props) {
   };
 
   return (
-    <header className="flex items-center border-2 py-4">
+    <header className="flex items-center border-2 border-b-0 py-4 text-xl">
       <input
         id="check-all"
         className="hidden h-full"
         type="checkbox"
         onClick={() => dispatch(checkAllTodo(isCheckAll()))}
       ></input>
-      <label htmlFor="check-all" className="px-5">
+      <label htmlFor="check-all" className="px-5 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6"
           fill="none"
           viewBox="0 0 24 24"
-          stroke={`${isCheckAll() ? "black" : "silver"}`}
+          stroke={`${isCheckAll() ? "green" : "silver"}`}
         >
           <path
             strokeLinecap="round"

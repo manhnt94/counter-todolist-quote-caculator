@@ -11,7 +11,7 @@ module.exports = {
     },
     extend: {
       height: (theme) => ({
-        "calc-bottom": "calc(100vh - 48px)", // Calc height for counter flex col with nav heigh 48px;
+        "calc-bottom": "calc(100vh - 48px)",
       }),
       flex: {
         "0020": "0 0 20%",
@@ -29,12 +29,23 @@ module.exports = {
       colors: {
         react: "#60dbfb",
       },
+      stroke: (theme) => ({
+        red: theme("colors.red.500"),
+        green: theme("colors.green.500"),
+        blue: theme("colors.blue.500"),
+      }),
+      boxShadow: {
+        "inner-custom": 'inset 0 5px 10px 0px rgba(0, 0, 0, 0.06)',
+      }
     },
   },
   variants: {
     extend: {
       opacity: ["disabled"],
       animation: ["responsive", "motion-safe", "motion-reduce"],
+      fill: ["hover", "focus"],
+      stroke: ["hover", "focus"],
+      borderWidth: ['hover', 'focus'],
     },
   },
   plugins: [],

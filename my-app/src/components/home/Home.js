@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../title/Title";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
             <article>
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
-                  src="/images/mycounter.png"
+                  src="/images/my-counter.png"
                   alt=""
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
@@ -37,7 +38,7 @@ export default function Home() {
             <article>
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
-                  src="https://www.linkpicture.com/q/meFull.jpg"
+                  src="/images/my-todolist.png"
                   alt=""
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
