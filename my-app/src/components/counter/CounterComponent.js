@@ -10,7 +10,7 @@ import CounterRedux from "./counter-redux/CounterRedux";
 
 export default function CounterComponent() {
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
@@ -21,7 +21,7 @@ export default function CounterComponent() {
         <Loading />
       ) : (
         <div className="bg-pink-400 h-full lg:h-screen">
-          <Title title={"My Counter"} />
+          <Title title="My Counter" />
           <div className="flex justify-around items-center flex-wrap">
             <CounterClassComponent />
             <CounterFunctionalComponent />
@@ -29,11 +29,9 @@ export default function CounterComponent() {
             <CounterRedux />
           </div>
           <MyFooter
-            styles={"text-white"}
-            information={"Disable button '---' when value is zero"}
-            description={
-              "Class Component, Functional Component, Redux, ImmerJS"
-            }
+            styles="text-white"
+            information="Disable button '---' when value is zero"
+            description="Class Component, Functional Component, Redux, ImmerJS"
             signature={SIGNATURE}
           />
         </div>

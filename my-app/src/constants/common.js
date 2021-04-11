@@ -1,1 +1,1 @@
-export const SIGNATURE = "Nguyen Tien Manh";
+export const SIGNATURE = "by Nguyen Tien Manh";
