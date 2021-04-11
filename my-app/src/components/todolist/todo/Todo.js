@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTodo, editTodo } from "../../../actions/todoActions";
 
@@ -8,7 +8,6 @@ export default function Todo(props) {
   const [isEditing, setIsEditing] = useState(false);
   const [editValue, setEditValue] = useState("");
   const dispatch = useDispatch();
-  const inputRef = useRef(null);
 
   const handleKeyPress = (e) => {
     if (e.code === "Enter") {
@@ -16,11 +15,6 @@ export default function Todo(props) {
       setIsEditing(false);
     }
   };
-
-  // Focus input when double click Todo
-  useEffect(() => {
-    inputRef && inputRef.current && inputRef.current.focus();
-  }, [isEditing]);
 
   return (
     <div className="flex items-center border-2 border-b-0 h-16 text-xl">
@@ -34,8 +28,8 @@ export default function Todo(props) {
         <input
           type="text"
           className="w-full h-3/4 rounded shadow-inner-custom outline-none ml-14 mr-14 border-2 border-gray-300"
-          ref={inputRef}
           value={editValue}
+          ref={inputRef => inputRef && inputRef.focus()}
           onChange={(e) => setEditValue(e.target.value)}
           onBlur={() => setIsEditing(false)}
           onKeyPress={handleKeyPress}

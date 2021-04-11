@@ -1,7 +1,7 @@
 export const colorList = [
-  "bg-red-500",
-  "bg-yellow-500",
-  "bg-green-500",
-  "bg-blue-500",
-  "bg-pink-500",
+  "red-500",
+  "yellow-500",
+  "green-500",
+  "blue-500",
+  "pink-500",
 ];

@@ -46,7 +46,7 @@ export default function TodoListComponent() {
         <Loading />
       ) : (
         <div className="bg-indigo-200 w-full h-screen box-border">
-          <Title title={"My Todolist"} />
+          <Title title="My Todolist" />
           <div className="bg-white xl:w-2/5 lg:w-3/5 md:w-3/5 xsm:w-4/5 m-auto shadow-xl rounded-xl overflow-hidden">
             <Header todos={todos} />
             <TodoList
@@ -56,9 +56,9 @@ export default function TodoListComponent() {
             <Footer todos={todos} handleFilter={handleFilter} />
           </div>
           <MyFooter
-            styles={"text-gray-600"}
-            information={"Double-click to edit a todo"}
-            description={"Functional Component, Redux"}
+            styles="text-gray-600"
+            information="Double-click to edit a todo"
+            description="Functional Component, Demo Redux"
             signature={SIGNATURE}
           />
         </div>

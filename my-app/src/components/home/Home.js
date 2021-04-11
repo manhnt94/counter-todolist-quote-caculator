@@ -1,5 +1,4 @@
 import React from "react";
-import Title from "../title/Title";
 
 export default function Home() {
   return (
@@ -57,7 +56,7 @@ export default function Home() {
             <article>
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
-                  src="https://www.linkpicture.com/q/meFull.jpg"
+                  src="/images/quote-machine.png"
                   alt=""
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
