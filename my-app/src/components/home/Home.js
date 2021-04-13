@@ -19,7 +19,7 @@ export default function Home() {
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
                   src="/images/my-counter.png"
-                  alt=""
+                  alt="My counter"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
@@ -38,7 +38,7 @@ export default function Home() {
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
                   src="/images/my-todolist.png"
-                  alt=""
+                  alt="My todolist"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
@@ -57,7 +57,7 @@ export default function Home() {
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
                   src="/images/quote-machine.png"
-                  alt=""
+                  alt="My quote"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
@@ -75,8 +75,8 @@ export default function Home() {
             <article>
               <div className="box-image-wrapper h-60 relative overflow-hidden rounded-t-md">
                 <img
-                  src="https://www.linkpicture.com/q/meFull.jpg"
-                  alt=""
+                  src="/images/my-caculator.png"
+                  alt="My caculator"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
