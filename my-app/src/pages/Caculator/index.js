@@ -21,17 +21,7 @@ export default function Caculator(props) {
 
   const endWithNegativeSign = /\d[x+/-]{1}-$/; // Digit - operator - end with negative sign: (9x-) -> true, (9-x) => false
   const isOperator = /[x/+-]/; // '(9+9+9)' => true: if have operator, (999) => false
-  const anOperator = /^[*/+-]$/g; // Check have only one operator: (9+9) => true, (9+9+9) => false
   const matchOnlyZero = /([^.0-9]0|^0)$/; // +0, 0...
-
-  // const isCaculation = (formula) => {
-  //   return anOperator.test(formula);
-  // };
-
-  // const isNumberic = (val) => {
-  //   if (typeof value != "string") return false;
-  //   return !isNaN(val) && !isNaN(parseFloat(val));
-  // };
 
   // Handle AC button
   const handleAllClear = (e) => {
@@ -67,14 +57,11 @@ export default function Caculator(props) {
       const { result, formula, evaluated } = caculator;
       const value = e.target.value;
 
-      console.log(caculator);
-
       setCaculator((prevState) => ({
         ...prevState,
         evaluated: false,
       }));
 
-      console.log(evaluated);
       if (result.length > 21) {
         maxDigitMessage();
       } else if (evaluated) {
@@ -105,7 +92,7 @@ export default function Caculator(props) {
     // result: 99 -> click: . -> 99.
     // result: 99 -> click: = -> click: . => 0.
     if (caculator.evaluated) {
-      console.log("ok");
+
       setCaculator((prevState) => ({
         ...prevState,
         result: "0.",
@@ -116,7 +103,7 @@ export default function Caculator(props) {
       !caculator.result.includes(".") &&
       !caculator.result.includes("LIMIT")
     ) {
-      console.log("else if");
+
       setCaculator({
         ...caculator,
         evaluated: false,
@@ -128,14 +115,14 @@ export default function Caculator(props) {
         endWithOperator.test(caculator.formula) ||
         (caculator.result === "0" && caculator.formula === "")
       ) {
-        console.log("endWith");
+
         setCaculator({
           ...caculator,
           result: "0.",
           formula: caculator.formula + "0.", // formular: 99+ -> click: . => 99 + 0.
         });
       } else {
-        console.log("else");
+
         setCaculator({
           ...caculator,
           result: caculator.formula.match(/(-?\d+)$/)[0] + ".",
