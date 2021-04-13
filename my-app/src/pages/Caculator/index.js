@@ -92,6 +92,7 @@ export default function Caculator(props) {
     // result: 99 -> click: . -> 99.
     // result: 99 -> click: = -> click: . => 0.
     if (caculator.evaluated) {
+
       setCaculator((prevState) => ({
         ...prevState,
         result: "0.",
@@ -102,6 +103,7 @@ export default function Caculator(props) {
       !caculator.result.includes(".") &&
       !caculator.result.includes("LIMIT")
     ) {
+
       setCaculator({
         ...caculator,
         evaluated: false,
@@ -113,12 +115,14 @@ export default function Caculator(props) {
         endWithOperator.test(caculator.formula) ||
         (caculator.result === "0" && caculator.formula === "")
       ) {
+
         setCaculator({
           ...caculator,
           result: "0.",
           formula: caculator.formula + "0.", // formular: 99+ -> click: . => 99 + 0.
         });
       } else {
+
         setCaculator({
           ...caculator,
           result: caculator.formula.match(/(-?\d+)$/)[0] + ".",
