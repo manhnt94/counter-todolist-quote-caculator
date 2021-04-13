@@ -1,0 +1,54 @@
+.cal-bg {
+  background-color: #d68181;
+}
+
+.screen {
+  background-color: #bccd95;
+}
+
+.btn.pink {
+  color: black;
+  background-color: #ff4561;
+  border-bottom: black 2px solid;
+}
+
+.btn.gray {
+  color: white;
+  background-color: #6f6f6f;
+  border-bottom: black 2px solid;
+  border-top: 2px #6f6f6f solid;
+}
+
+.btn.black {
+  color: white;
+  background-color: #4d4c4c;
+  border-bottom: black 2px solid;
+  border-top: 2px #4d4c4c solid;
+}
+
+.btn.orange {
+  color: black;
+  background-color: #ff9933;
+  border-bottom: black 2px solid;
+  border-top: 2px #ff9933 solid;
+}
+
+.gray:active {
+  border-top: black 2px solid;
+  border-bottom: 2px #6f6f6f solid;
+}
+
+.pink:active {
+  border-top: black 2px solid;
+  border-bottom: #ff4561 2px solid;
+}
+
+.black:active {
+  border-top: black 2px solid;
+  border-bottom: #4d4c4c 2px solid;
+}
+
+.orange:active {
+  border-top: black 2px solid;
+  border-bottom: #ff9933 2px solid;
+}
